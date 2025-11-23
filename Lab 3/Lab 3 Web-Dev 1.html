@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Portfolio</title>
+  <style>
+        :root {
+      --primary: #38598b;
+      --accent: #f67280;
+      --light: #fff;
+      --dark: #22223b;
+      --transition: 0.4s cubic-bezier(0.5,1.5,0.5,1);
+    }
+    /* RESET & BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+      min-height: 100vh;
+      padding: 0;
+    }
+
+    /* HEADER WITH FLEXBOX */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 5vw;
+      background: var(--primary);
+      color: var(--light);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 9px rgba(56,89,139,0.06);
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+    nav a {
+      color: var(--light);
+      text-decoration: none;
+      font-size: 1.1rem;
+      letter-spacing: 0.07em;
+      padding: 0.4em 1em;
+      border-radius: 1.5rem;
+      transition: background var(--transition), color var(--transition), transform 0.2s;
+    }
+    nav a:hover, nav a:focus {
+      background: var(--accent);
+      color: var(--dark);
+      transform: scale(1.08) rotate(-2deg);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+      text-align: center;
+      background: linear-gradient(120deg, #38598b 0%, #f67280 100%);
+      color: var(--light);
+      padding: 6vh 5vw 8vh 5vw;
+      animation: fadeInHero 1.5s 0.1s both;
+    }
+    @keyframes fadeInHero {
+      from { opacity: 0; transform: translateY(-3rem);}
+      to { opacity: 1; transform: none;}
+    }
+    .hero-title {
+      font-size: clamp(2.2rem, 8vw, 4rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+      letter-spacing: 0.03em;
+    }
+    .hero-desc {
+      font-size: 1.25rem;
+      margin-bottom: 2.5rem;
+      max-width: 40rem;
+      color: #e3e7f0;
+    }
+    .hero-btn {
+      background: var(--accent);
+      color: var(--light);
+      border: none;
+      padding: 1rem 2.5rem;
+      font-size: 1.2rem;
+      border-radius: 2rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background var(--transition), color var(--transition), transform 0.3s;
+      box-shadow: 0 6px 14px rgba(246,114,128,0.09);
+    }
+    .hero-btn:active, .hero-btn:hover {
+      background: var(--light);
+      color: var(--accent);
+      transform: translateY(-0.25em) scale(1.05) rotate(2deg);
+    }
+
+    /* ABOUT SECTION: FLEXBOX */
+    .about {
+      display: flex;
+      align-items: center;
+      gap: 3vw;
+      padding: 5vh 5vw;
+      background: #f7f9fb;
+      flex-wrap: wrap;
+    }
+    .about-img {
+      flex: 1 1 220px;
+      max-width: 260px;
+      min-width: 140px;
+      border-radius: 1em;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(56,89,139,0.06);
+      animation: floatImg 2.2s infinite alternate ease-in-out;
+    }
+    @keyframes floatImg {
+      from { transform: translateY(0);}
+      to { transform: translateY(-1.2rem);}
+    }
+    .about-content {
+      flex: 3 1 360px;
+      min-width: 240px;
+      font-size: 1.1rem;
+    }
+    .about-title {
+      font-size: 2rem;
+      margin-bottom: 0.8em;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    /* PROJECTS SECTION WITH CSS GRID */
+    .projects-section {
+      padding: 6vh 5vw;
+      background: #fafaff;
+    }
+    .projects-title {
+      font-size: 2rem;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .project-card {
+      background: var(--light);
+      border-radius: 1em;
+      box-shadow: 0 2px 16px #38598b17;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: box-shadow var(--transition), transform 0.2s;
+    }
+    .project-card:hover, .project-card:focus-within {
+      box-shadow: 0 8px 30px #38598b23;
+      transform: translateY(-0.5em) scale(1.04) rotate(-1.5deg);
+    }
+    .project-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.5em;
+      color: var(--accent);
+    }
+    .project-desc {
+      font-size: 1rem;
+      margin-bottom: 1.1em;
+      color: #383d41;
+    }
+    .project-link {
+      align-self: flex-end;
+      background: var(--primary);
+      color: var(--light);
+      text-decoration: none;
+      padding: 0.6em 1.3em;
+      border-radius: 1.5em;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background var(--transition), color var(--transition), transform 0.2s;
+    }
+    .project-link:hover, .project-link:focus {
+      background: var(--accent);
+      color: var(--dark);
+      transform: scale(1.09) skewX(-4deg);
+    }
+
+    /* CONTACT SECTION */
+    .contact-section {
+      padding: 5vh 5vw;
+      background: #e5eaf5;
+      text-align: center;
+      color: var(--dark);
+    }
+    .contact-title {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+    .contact-form {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.3em;
+      max-width: 400px;
+    }
+    .contact-form input, .contact-form textarea {
+      padding: 0.8em 1em;
+      font-size: 1em;
+      border: 1px solid #bdd2fc;
+      border-radius: 0.7em;
+      font-family: inherit;
+    }
+    .contact-form button {
+      background: var(--accent);
+      color: var(--light);
+      border: none;
+      padding: 0.85em 1.5em;
+      border-radius: 1.5em;
+      font-weight: 700;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background var(--transition), color var(--transition), transform 0.15s;
+    }
+    .contact-form button:hover, .contact-form button:focus {
+      background: var(--primary);
+      color: var(--light);
+      transform: translateY(-0.18em) scale(1.05);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      font-size: 1rem;
+      background: var(--primary);
+      color: var(--light);
+      padding: 1.5em 0;
+      letter-spacing: 0.06em;
+    }
+    /* MEDIA QUERIES - MOBILE FIRST */
+    @media (max-width: 900px) {
+      .about {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+      }
+      .about-img {
+        margin: 0 auto 2rem auto;
+      }
+    }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 0.7em;
+        padding: 1.2rem 2vw;
+      }
+      nav ul {
+        gap: 1.2rem;
+      }
+      .about, .projects-section, .contact-section {
+        padding-left: 3vw;
+        padding-right: 3vw;
+      }
+    }
+    @media (max-width: 420px) {
+      html {
+        font-size: 14px;
+      }
+      .hero-btn, nav a, .project-link {
+        padding-left: 1em;
+        padding-right: 1em;
+        font-size: 1rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Priyanshu Kathuria</div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero">
+    <h1 class="hero-title">Hi, I'm UX-UI Designer</h1>
+    <p class="hero-desc">
+      An aspiring front-end developer passionate about creating responsive, interactive, and visually appealing websites. Let's build something together!
+    </p>
+    <a href="#contact"><button class="hero-btn">Contact Me</button></a>
+  </section>
+  <section id="about" class="about">
+    <div class="about-img">
+      <img src="WhatsApp Image 2025-10-03 at 02.47.52_f02409e6.jpg" alt="Priyanshu Kathuria" width="250" height="250">
+    </div>
+    <div class="about-content">
+      <h2 class="about-title">About Me</h2>
+      <p>
+        I'm a beginner developer with interests in web design, Python programming, and cybersecurity. My aim is to craft digital experiences that are both functional and beautiful. I enjoy learning new technologies, experimenting with UI, and solving real-world problems with code.
+      </p>
+    </div>
+  </section>
+  <section id="projects" class="projects-section">
+    <h2 class="projects-title">Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3 class="project-title">Portfolio Website:</h3>
+        <p class="project-desc">A personal one-page website to showcase your bio,skills and contact details.</p>
+        <a href="#" class="project-link">View Code</a>
+      </div>
+      <div class="project-card">
+        <h3 class="project-title">Medium Clone:</h3>
+        <p class="project-desc"><A simple blog layout that looks like medium,built only with HTML and CSS./p>
+        <a href="#" class="project-link">Live Demo</a>
+      </div>
+      <div class="project-card">
+        <h3 class="project-title">Responsive Landing Page:</h3>
+        <p class="project-desc">A landing page for a product or service that is fully responsive across devices.</p>
+        <a href="#" class="project-link">GitHub Repo</a>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact-section">
+    <h2 class="contact-title">Contact Me</h2>
+    <form class="contact-form" autocomplete="off">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+  <footer>
+    &copy; 2025 Your Priyanshu Kathuria. All rights reserved. | Designed with Flexbox, Grid & ♥
+  </footer>
+</body>
+</html>
