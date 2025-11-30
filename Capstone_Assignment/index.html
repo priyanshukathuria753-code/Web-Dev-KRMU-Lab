@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Construct Up Edge — Modern construction and real estate listings. Explore residential, commercial, and ongoing projects." />
+  <title>Construct Up Edge | Real Estate & Construction</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-bar">
+      <a class="brand" href="#"></a>
+        <span class="brand-name">Construct Up Edge</span>
+
+      <nav class="primary-nav">
+        <ul class="nav-list">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#listings">Listings</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li class="cta"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-content">
+        <h1 id="hero-title">Space built to last</h1>
+        <p class="tagline">Residential, commercial, and industrial projects with uncompromising quality and transparent pricing.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#listings">Browse listings</a>
+          <a class="btn btn-secondary" href="#contact">Get a quote</a>
+        </div>
+      </div>
+      <!-- Decorative hero image (ensure a real image in images/hero.jpg) -->
+      <img class="hero-image" src="/assignment\WhatsApp Image 2025-11-29 at 17.34.22_5348385f.jpg" alt="Construct Up Edge" />
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 id="projects-title">Featured projects</h2>
+        <p>From ground-up builds to renovations, our portfolio spans multi-family residences, business parks, and smart industrial units.</p>
+
+        <ul class="project-highlights">
+          <li>
+            <article class="highlight-card">
+              <h3 class="card-title">Riverview Residences</h3>
+              <p>120-unit eco-friendly apartment complex with solar rooftops and rainwater harvesting.</p>
+              <a class="link" href="#listings">View similar listings</a>
+            </article>
+          </li>
+          <li>
+            <article class="highlight-card">
+              <h3 class="card-title">Orion Tech Park</h3>
+              <p>Grade-A offices, modular interiors, and high-speed connectivity for modern teams.</p>
+              <a class="link" href="#listings">Explore commercial units</a>
+            </article>
+          </li>
+          <li>
+            <article class="highlight-card">
+              <h3 class="card-title">Steelworks Industrial</h3>
+              <p>High-clearance warehouses with automated docking and energy-efficient lighting.</p>
+              <a class="link" href="#listings">See industrial spaces</a>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="listings" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="listings-title">Property listings</h2>
+          <p>Browse available properties across residential, commercial, and industrial categories.</p>
+        </div>
+
+        <aside class="filters">
+          <form class="filter-form" action="#" method="get">
+              <h2>Filters</h2>
+              <div class="filter-row">
+                <label for="type">Type</label>
+                <select id="type" name="type">
+                  <option value="">Any</option>
+                  <option value="residential">Residential</option>
+                  <option value="commercial">Commercial</option>
+                  <option value="industrial">Industrial</option>
+                </select>
+              </div>
+
+              <div class="filter-row">
+                <label for="budget">Budget</label>
+                <select id="budget" name="budget">
+                  <option value="">Any</option>
+                  <option value="low">₹50L–₹1Cr</option>
+                  <option value="mid">₹1Cr–₹3Cr</option>
+                  <option value="high">₹3Cr+</option>
+                </select>
+              </div>
+
+              <div class="filter-row">
+                <label for="location">Location</label>
+                <input id="location" name="location" type="text" placeholder="e.g., Manesar, Gurugram" />
+              </div>
+
+              <button class="btn btn-primary" type="submit">Apply filters</button>
+          </form>
+        </aside>
+
+        <div class="grid listings-grid">
+          <!-- Card 1 -->
+          <article class="card">
+            <img src="/image\images.jpeg" alt="Contemporary 3BHK apartment exterior view." height="600" width="800"/>
+            <div class="card-body">
+              <h3 id="card-1-title">4BHK flat</h3>
+              <p class="meta">Sector-56,Gurugram</p>
+              <ul class="features">
+                <li><span>Area:</span> 2,450 sq ft</li>
+                <li><span>Amenities:</span> Club House, park, parking</li>
+                <li><span>Price:</span> ₹1.35Cr</li>
+              </ul>
+              <div class="card-actions">
+                <a class="btn btn-secondary" href="#contact">Request details</a>
+                <a class="link" href="#">View floor plan</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card">
+            <img src="/image\2_3c7f4c46b7.webp" alt="Modern office space with glass facade." />
+            <div class="card-body">
+              <h3 id="card-2-title">Grade-A Office — Orion Tech Park</h3>
+              <p class="meta">Gurugram • Ready shell</p>
+              <ul class="features">
+                <li><span>Area:</span> 3,200 sq ft</li>
+                <li><span>Parking:</span> 4 bays</li>
+                <li><span>Lease:</span> ₹180/sq ft</li>
+              </ul>
+              <div class="card-actions">
+                <a class="btn btn-secondary" href="#contact">Arrange a visit</a>
+                <a class="link" href="#">Download brochure</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card">
+            <img src="/image\Warehousing_2.webp" alt="Warehouse with high-clearance ceiling and loading docks." />
+            <div class="card-body">
+              <h3 id="card-3-title">Warehouse — Steelworks</h3>
+              <p class="meta">IMT Manesar • Q1 2026</p>
+              <ul class="features">
+                <li><span>Area:</span> 20,000 sq ft</li>
+                <li><span>Docking:</span> Automated</li>
+                <li><span>Power:</span> 250 kVA</li>
+              </ul>
+              <div class="card-actions">
+                <a class="btn btn-secondary" href="#contact">Get quotation</a>
+                <a class="link" href="#">View specs</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="card">
+            <img src="/image\images (1).jpeg" alt="Luxury penthouse terrace with city view." height="600" width="800"/>
+            <div class="card-body">
+              <h3 id="card-4-title">Penthouse — Skyline</h3>
+              <p class="meta">DLF Phase V • Premium</p>
+              <ul class="features">
+                <li><span>Area:</span> 2,800 sq ft</li>
+                <li><span>Outdoor:</span> Private deck</li>
+                <li><span>Price:</span> ₹5.8Cr</li>
+              </ul>
+              <div class="card-actions">
+                <a class="btn btn-secondary" href="#contact">Book a tour</a>
+                <a class="link" href="#">Learn more</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2 id="services-title">Construction & design services</h2>
+        <div class="services">
+          <article class="service">
+            <h3>Design-build</h3>
+            <p>Integrated planning, architecture, and construction for end-to-end delivery.</p>
+          </article>
+          <article class="service">
+            <h3>Renovations</h3>
+            <p>Structural upgrades, interior remodeling, and energy retrofits.</p>
+          </article>
+          <article class="service">
+            <h3>Project management</h3>
+            <p>Vendor coordination, timelines, and transparent reporting.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2 id="about-title">About Construct Up Edge</h2>
+        <p>We’re a Manesar-based construction company delivering durable builds with a focus on safety, efficiency, and design. Our team blends engineering rigor with thoughtful aesthetics to create spaces people love.
+           Founded in 2025, we have built a solid reputation for excellence in [e.g., general contracting, design-build, project management] services, consistently ensuring projects are completed on time, within budget, and to the highest quality standards. Our team of experienced professionals is committed to leveraging cutting-edge techniques and maintaining rigorous safety protocols to deliver innovative, functional, and secure spaces tailored to our clients' unique requirements. At [Your Company Name], we pride ourselves on clear communication, strong client collaboration, and a proven track record of exceeding expectations."
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 id="contact-title">Get in touch</h2>
+        <p>Send an inquiry and our team will reach out within 24 hours.</p>
+
+        <form class="contact-form" action="#" method="post">
+          <p id="contact-hint">All fields marked “required” must be completed.</p>
+
+          <div class="form-row">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+          </div>
+
+          <div class="form-row">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" placeholder="+91 XXX-XXX-XXXX">
+          </div>
+
+          <div class="form-row">
+            <label for="interest">Interested in</label>
+            <select id="interest" name="interest">
+              <option value="">Select</option>
+              <option value="residential">Residential</option>
+              <option value="commercial">Commercial</option>
+              <option value="industrial">Industrial</option>
+              <option value="construction-services">Construction services</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your requirements" required></textarea>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Submit inquiry</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <section class="footer-brand">
+        <h2 id="footer-brand-title" class="visually-hidden">Company info</h2>
+        <a class="brand brand-footer" href="#">
+          <span class="brand-name">Construct Up Edge</span>
+        </a>
+        <p>Manesar, Haryana • CIN: ABC123 • © Construct Up edge.</p>
+      </section>
+
+      <nav class="footer-nav">
+        <ul class="footer-links">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#listings">Listings</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <aside class="socials">
+        <ul class="social-list">
+          <li>
+            <a href="#" aria-label="Follow on Twitter"></a>
+          </li>
+          <li>
+            <a href="#" aria-label="Connect on LinkedIn"></a>
+          </li>
+          <li>
+            <a href="#" aria-label="Follow on Instagram"></a>
+          </li>
+        </ul>
+      </aside>
+    </div>
+
+    <div class="container footer-note">
+      <p>>Made with semantic HTML5 & modern CSS. Images used are for demonstration; replace with optimized assets.</p>
+    </div>
+  </footer>
+
+  <!-- Non-essential: set current year without JS by server, else manually update; kept static here -->
+  <!-- <script>document.getElementById('year').textContent = new Date().getFullYear();</script> -->
+</body>
+</html>
